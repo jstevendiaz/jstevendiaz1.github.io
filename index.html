@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMPBDS - Innovación y Desarrollo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #FF6F00;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+
+        nav button:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            display: none;
+            margin-bottom: 20px;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .section .text {
+            padding: 20px;
+        }
+
+        .section .image {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .section img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .image-gallery img {
+            max-width: 45%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight {
+            color: #FF6F00;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            color: white;
+        }
+
+        .social-icons {
+            margin-top: 20px; 
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 40px; /* Aumentamos el tamaño de los íconos */
+        }
+
+        .social-icons a:hover {
+            color: #FF6F00;
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>SMPBDS - Innovación y Desarrollo</h1>
+    </header>
+
+    <nav>
+        <button onclick="showSection('quienes-somos')">Inicio</button>
+        <button onclick="showSection('objetivos')">Objetivos Estratégicos</button>
+        <button onclick="showSection('mision-vision')">Misión y Visión</button>
+        <button onclick="showSection('principios')">Principios</button>
+    </nav>
+
+    <main>
+        <div id="quienes-somos" class="section active">
+            <div class="text">
+                <h2>Quiénes Somos</h2>
+                <p>La Sociedad de Mejoras Públicas de Buenaventura y Desarrollo Sostenible (SMPBDS) es una organización comprometida con la transformación social, económica y ambiental de Buenaventura. Desde su creación, hemos trabajado para fomentar el desarrollo sostenible, mejorar la calidad de vida de nuestros habitantes y promover iniciativas que generen impacto positivo en la comunidad. Nuestra esencia se basa en la innovación, el trabajo colaborativo y el respeto por nuestro entorno.</p>
+                <h3>Línea de Acción</h3>
+                <p>Nuestra línea de acción está enfocada en implementar proyectos de impacto social, económico y ambiental que promuevan el desarrollo sostenible de Buenaventura y el bienestar de sus habitantes. Nos centramos en la colaboración, la innovación y la responsabilidad social para transformar nuestra región de manera integral.</p>
+            </div>
+            <div class="image">
+                <img src="imagen.jpg" alt="Quiénes somos">
+            </div>
+          
+        </div>
+
+        <div id="objetivos" class="section">
+            <div class="text">
+                <h2>Objetivos Estratégicos</h2>
+                <p><span class="highlight">01</span> Implementar proyectos alineados con los Objetivos de Desarrollo Sostenible (ODS) que contribuyan al bienestar de la población de Buenaventura.</p>
+                <p><span class="highlight">02</span> Fomentar la participación ciudadana en iniciativas de mejora social y comunitaria.</p>
+                <p><span class="highlight">03</span> Generar alianzas estratégicas con entidades públicas, privadas y de cooperación internacional.</p>
+                <p><span class="highlight">04</span> Desarrollar programas educativos y culturales que impulsen el crecimiento personal y colectivo.</p>
+                <p><span class="highlight">05</span> Promover el cuidado del medio ambiente a través de campañas de concienciación y proyectos ecológicos.</p>
+            </div>
+        
+        </div>
+        <div id="mision-vision" class="section">
+            <div class="text">
+                <h2>Misión</h2>
+                <p>Ser un motor de cambio que, a través de la gestión de proyectos sostenibles, fortalezca el desarrollo integral de Buenaventura, garantizando la inclusión, equidad y sostenibilidad en todas nuestras acciones.</p>
+                <h2>Visión</h2>
+                <p>Para 2030, consolidarnos como una organización líder en Buenaventura y a nivel nacional, reconocida por nuestra contribución al desarrollo sostenible, el fortalecimiento social y la ejecución de proyectos innovadores que transformen nuestra región.</p>
+            </div>
+        </div>
+
+        <div id="principios" class="section">
+            <div class="text">
+                <h2>Principios</h2>
+                <p><span class="highlight">Transparencia:</span> Actuamos con claridad y honestidad en todos nuestros procesos, garantizando la confianza de la comunidad y los aliados estratégicos.</p>
+                <p><span class="highlight">Innovación:</span> Promovemos soluciones creativas y sostenibles que respondan a las necesidades cambiantes de nuestro entorno.</p>
+                <p><span class="highlight">Sostenibilidad:</span> Todas nuestras acciones están orientadas a equilibrar el desarrollo social, económico y ambiental.</p>
+                <p><span class="highlight">Equidad:</span> Trabajamos para reducir desigualdades, garantizando la inclusión de todos los sectores de la sociedad.</p>
+                <p><span class="highlight">Colaboración:</span> Fomentamos el trabajo conjunto entre la comunidad, organizaciones y entidades gubernamentales para lograr objetivos comunes.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Sociedad de Mejoras Públicas de Buenaventura y Desarrollo Sostenible (SMPBDS) &copy; 2025</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
